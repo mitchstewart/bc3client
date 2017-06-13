@@ -6,18 +6,6 @@ http://bundler.io/v1.12/guides/creating_gem.html
 How run a single test: 
 bundle exec rspec ./spec/bc3client_spec.rb:12
 
-How to execute a curl request for basecamps:
-curl -H "Authorization: Bearer BAhbB0kiAbB7ImNsaWVudF9pZCI6IjRkYjg1YTFmYjIwYjRiY2RmODg1YWNhNDFmZWI2NjI5MzYyODc0ZDkiLCJleHBpcmVzX2F0IjoiMjAxNy0wNi0yMVQwMTo0MzowNloiLCJ1c2VyX2lkcyI6WzMyNDYzMjA1XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZTE3Yzg5YzJkZjE5ODAzNzRkZTk4OWU2NjQwNzI5ZDEifQY6BkVUSXU6CVRpbWUNoVYdwPVfbqwJOg1uYW5vX251bWkCQwI6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgdXkDoJem9uZUkiCFVUQwY7AEY=--6f0259e559b7d0f34aa2142ebc48fbaca2ea8bb5" -H 'User-Agent: MyApp (yourname@example.com)' https://3.basecampapi.com/3735142/projects.json
-
-How to execute a curl request for to-do lists:
-curl -s -H "Authorization: Bearer BAhbB0kiAbB7ImNsaWVudF9pZCI6IjRkYjg1YTFmYjIwYjRiY2RmODg1YWNhNDFmZWI2NjI5MzYyODc0ZDkiLCJleHBpcmVzX2F0IjoiMjAxNy0wNi0yMVQwMTo0MzowNloiLCJ1c2VyX2lkcyI6WzMyNDYzMjA1XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZTE3Yzg5YzJkZjE5ODAzNzRkZTk4OWU2NjQwNzI5ZDEifQY6BkVUSXU6CVRpbWUNoVYdwPVfbqwJOg1uYW5vX251bWkCQwI6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgdXkDoJem9uZUkiCFVUQwY7AEY=--6f0259e559b7d0f34aa2142ebc48fbaca2ea8bb5" -H 'User-Agent: MyApp (yourname@example.com)' https://3.basecampapi.com/3735142/buckets/3515307/todosets/492500724/todolists.json
-
-How to execute a curl request for a to-do list:
-curl -s -H "Authorization: Bearer BAhbB0kiAbB7ImNsaWVudF9pZCI6IjRkYjg1YTFmYjIwYjRiY2RmODg1YWNhNDFmZWI2NjI5MzYyODc0ZDkiLCJleHBpcmVzX2F0IjoiMjAxNy0wNi0yMVQwMTo0MzowNloiLCJ1c2VyX2lkcyI6WzMyNDYzMjA1XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZTE3Yzg5YzJkZjE5ODAzNzRkZTk4OWU2NjQwNzI5ZDEifQY6BkVUSXU6CVRpbWUNoVYdwPVfbqwJOg1uYW5vX251bWkCQwI6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgdXkDoJem9uZUkiCFVUQwY7AEY=--6f0259e559b7d0f34aa2142ebc48fbaca2ea8bb5" -H 'User-Agent: MyApp (yourname@example.com)' https://3.basecampapi.com/3735142/buckets/3515307/todolists/492501801.json
-
-
-https://3.basecampapi.com/3735142/buckets/3515307/todosets/492500724.json
-
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bc3client`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
