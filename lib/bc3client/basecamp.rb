@@ -6,12 +6,12 @@ require "json"
 
 module Bc3client
 
-  # Initialization
-  # Bc3client::Basecamp.new(
-  #   :access_token => "abc",
-  #   :account_id => 123
-  # )
   class Basecamp < Resource
+
+    def initialize(*args)
+      args = args.flatten(1) unless !args[0].is_a?(Array)
+      super(args)
+    end
 
     def all
       get build_uri basecamps_path
@@ -24,11 +24,11 @@ module Bc3client
     private
 
       def basecamps_path
-        "/#{@settings[:account_id]}/projects.json"
+        "/#{@account_id}/projects.json"
       end
 
       def basecamp_path(id)
-        "/#{@settings[:account_id]}/projects/#{id}.json"
+        "/#{@account_id}/projects/#{id}.json"
       end
   end
 end

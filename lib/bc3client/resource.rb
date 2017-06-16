@@ -4,13 +4,16 @@ module Bc3client
 
   class Resource
 
-    # :accesss_token, :account_id, :user_agent
-    attr_accessor :settings
-    attr_accessor :base_uri
-
-    def initialize(settings)
-      @settings = settings
+    def initialize(*args)
+      args = args.flatten(1) unless !args[0].is_a?(Array)
+      @access_token = args[0]
+      @user_agent = args[1]
+      @account_id = args[2]
       @base_uri = "https://3.basecampapi.com"
+    end
+
+    def test
+      puts "account id = #{@account_id}"
     end
 
     def build_uri(path)
@@ -23,8 +26,8 @@ module Bc3client
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         request = Net::HTTP::Get.new(uri.request_uri)
-        request['Authorization'] = "Bearer #{@settings[:access_token]}"
-        request['User-Agent'] = @settings[:user_agent]
+        request['Authorization'] = "Bearer #{@access_token}"
+        request['User-Agent'] = @user_agent
         response = http.request(request)
         JSON.parse(response.body)
       end

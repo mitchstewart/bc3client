@@ -6,13 +6,13 @@ require "json"
 
 module Bc3client
 
-  # Initialization
-  # Bc3client::Basecamp.new(
-  #   :access_token => "abc",
-  #   :account_id => 123,
-  #   :project_id => 456
-  # )
   class ToDoSet < Resource
+
+    def initialize(*args)
+      args = args.flatten(1) unless !args[0].is_a?(Array)
+      super(args)
+      @project_id = args[3]
+    end
 
     def find_by_id(todo_set_id)
       get build_uri(todo_set_path(todo_set_id))
@@ -21,7 +21,7 @@ module Bc3client
     private
 
       def todo_set_path(todo_set_id)
-        "/#{@settings[:account_id]}/buckets/#{@settings[:project_id]}/todosets/#{todo_set_id}.json"
+        "/#{@account_id}/buckets/#{@project_id}/todosets/#{todo_set_id}.json"
       end
   end
 end
