@@ -1,4 +1,4 @@
-require 'bc3client'
+require 'messenger'
 require "net/http"
 require "uri"
 require "messenger/resource"

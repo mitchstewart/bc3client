@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bc3client/version'
+require 'messenger/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bc3client"
-  spec.version       = Bc3client::VERSION
+  spec.version       = Messenger::VERSION
   spec.authors       = ["Mitch Stewart"]
   spec.email         = ["mitch.stewart.io@gmail.com"]
 
