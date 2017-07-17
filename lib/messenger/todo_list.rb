@@ -1,11 +1,10 @@
 require 'bc3client'
 require "net/http"
 require "uri"
-require "bc3client/resource"
+require "messenger/resource"
 require "json"
 
-module Bc3client
-
+module Messenger
   class ToDoList < Resource
 
     def initialize(*args)

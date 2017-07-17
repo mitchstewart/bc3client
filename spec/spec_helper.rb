@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "bc3client"
+require "messenger"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

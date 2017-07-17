@@ -1,11 +1,10 @@
-require 'bc3client'
+require 'basecamp'
 require "net/http"
 require "uri"
-require "bc3client/resource"
+require "messenger/resource"
 require "json"
 
-module Bc3client
-
+module Basecamp
   class Basecamp < Resource
 
     def initialize(*args)

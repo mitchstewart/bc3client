@@ -1,18 +1,20 @@
-require 'bc3client'
+require 'messenger'
 require "net/http"
 require "uri"
-require "bc3client/resource"
 require "json"
+require "messenger/resource"
 
-module Bc3client
-
+module Messenger
   class Client
 
     attr_accessor :basecamp
 
     def initialize(*args)
       @args = args
-      @basecamp = Bc3client::Basecamp.new(@args)
+    end
+
+    def basecamp
+      Bc3client::Basecamp.new(@args)
     end
 
     def todo project_id

@@ -1,7 +1,6 @@
-require 'bc3client'
+require 'messenger'
 
-module Bc3client
-
+module Messenger
   class Resource
 
     def initialize(*args)
@@ -10,10 +9,6 @@ module Bc3client
       @user_agent = args[1]
       @account_id = args[2]
       @base_uri = "https://3.basecampapi.com"
-    end
-
-    def test
-      puts "account id = #{@account_id}"
     end
 
     def build_uri(path)
