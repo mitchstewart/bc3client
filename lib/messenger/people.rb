@@ -1,5 +1,6 @@
 require 'messenger'
 require 'messenger/models/person'
+require "messenger/resource"
 
 module Messenger
   class People < Resource

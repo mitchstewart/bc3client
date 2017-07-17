@@ -1,6 +1,7 @@
 require "messenger/version"
-require "messenger/basecamp"
 require "messenger/people"
+require "messenger/resource"
+require "messenger/basecamp"
 
 module Messenger
   class Client

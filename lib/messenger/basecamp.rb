@@ -1,10 +1,9 @@
-require 'basecamp'
 require "net/http"
 require "uri"
 require "messenger/resource"
 require "json"
 
-module Basecamp
+module Messenger
   class Basecamp < Resource
 
     def initialize(*args)
